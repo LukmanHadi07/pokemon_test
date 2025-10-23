@@ -1,0 +1,1 @@
+enum DetailSection { about, baseState }
