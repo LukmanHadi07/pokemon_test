@@ -67,8 +67,9 @@ class _GenerationScreenState extends State<GenerationScreen> {
       builder: (context, box, _) {
         final favorites = _readFavorites(box);
         final count = favorites.items.length;
-        final label =
-            favorites.error == null && count > 0 ? 'FAVORITE ($count)' : 'FAVORITE';
+        final label = favorites.error == null && count > 0
+            ? 'FAVORITE ($count)'
+            : 'FAVORITE';
         return TitleGenerationWidget(title: label);
       },
     );
@@ -93,7 +94,7 @@ class _GenerationScreenState extends State<GenerationScreen> {
           final theme = themeCubit.currentTheme;
           return Center(
             child: Text(
-              'No favorites yet',
+              'Tidak ada pokemon favorit',
               style: theme.fontLocalTheme.bodyLargeSemiBoldFont.copyWith(
                 color: AppColors.whiteColor,
               ),
